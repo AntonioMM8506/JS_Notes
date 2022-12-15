@@ -1,0 +1,27 @@
+// MongoDB Playground
+// Make sure you are connected to enable completions and to be able to run a playground.
+
+// Select the database to use.
+use('learning_data');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+db.clients.drop()
+
+// Insert just one document, with specific ID
+db.clients.insertOne({
+  _id: 1,
+  name: 'Jhon',
+  lastName: 'Doe',
+  age: 28,
+  gender: 'M',
+  birthday: new Date('1998-03-01T08:00:00Z'),
+})
+
+// Insert a few documents into the sales collection, we will use a mix ID generation
+const address = { street: '247 Lancaster Lane Bay Shore', state: 'NY', zipcode: 11706 }
+db.clients.insertMany([
+  { _id: 2, lastName: 'Bush', gender: 'M', address: address, age: 18 },
+  { name: 'Jane', gender: 'F', age: 30 },
+  { _id: '0c4egdy2', name: 'Julian', lastName: 'Cassandro'},
+])

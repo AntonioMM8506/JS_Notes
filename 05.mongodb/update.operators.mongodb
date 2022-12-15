@@ -1,0 +1,52 @@
+// Select the database to use.
+use('learning_data')
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $inc:
+    Sometimes, you need to increment the value of one or more fields by a specified value. In this case, 
+    you can use the update() method with the $inc operator.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+db.products.updateOne({ _id: 1 }, { $inc: { price: 50 } })
+
+// Using the MongoDB $inc operator to decrease the value of a field
+//db.products.updateOne({ _id: 1 }, { $inc: { price: -50 } })
+
+// Using MongoDB $inc operator to update values of multiple fields
+//db.products.updateOne({ _id: 1 }, { $inc: { price: 50, 'spec.ram': 4 } })
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $unset:
+    Sometimes, you may want to remove one or more fields from a document. In order to do it, 
+    you can use the $unset operator.
+
+    The $unset is a field update operator that completely removes a particular field from a document.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+//db.products.updateOne({ _id: 1 }, { $unset: { price: "" } })
+
+// Using the MongoDB $unset operator to set array elements to null
+//db.products.updateMany({}, { $unset: { "storage.0": "" } })
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $rename:
+    Sometimes, you want to rename a field in a document e.g., when it is misspelled or not descriptive enough. 
+    In this case, you can use the $rename operator.
+
+    The $rename is a field update operator that allows you to rename a field in a document to the new one.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+//db.products.updateMany({}, { $rename: { name: "name_product" } })
+
+// Using the MongoDB $rename to move field out of the embedded document
+//db.products.updateMany({}, { $rename: { "spec.cpu": "cpu" } })

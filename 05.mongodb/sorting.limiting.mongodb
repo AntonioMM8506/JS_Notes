@@ -1,0 +1,36 @@
+// Select the database to use.
+use('learning_data')
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    sort:
+    The sort() method allows you to sort the matching documents by one or more fields (field1, field2, …) 
+    in ascending or descending order.
+
+    The order takes two values: 1 and -1. If you specify { field: 1 }, the sort() will sort the matching 
+    documents by the field in ascending order
+  ------------------------------------------------------------------------------------------------------------------
+*/
+//db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: 1 }) // ASC
+//db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: -1 }) // DESC
+
+// Sorting document by two or more
+//db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: -1, name: 1 })
+
+// Sorting documetns by dates
+//db.products.find({ releaseDate: { $exists: 1 } }, { name: 1, releaseDate: 1 }).sort({ releaseDate: 1 })
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    limit:
+    To limit the number of returned documents, you use the limit() method
+  ------------------------------------------------------------------------------------------------------------------
+*/
+//db.products.find({}, { name: 1 }).limit(2)
+
+// Using MongoDB limit() and skip() to get the paginated result
+db.products.find({}, { name: 1, price: 1 }).sort({ price: -1 }).limit(2).skip(2)
+
+

@@ -1,0 +1,51 @@
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    findOne()
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+// Select the database to use.
+//use('sample_airbnb');
+
+// Let's select one document using the id, we will get the full document
+// Let's do an empty query
+//db.listingsAndReviews.findOne({})
+
+// We need to provide a query, the query should be an json object
+//db.listingsAndReviews.findOne({ _id: '10006546' })
+
+// We can use any property of the document to do the search
+//db.listingsAndReviews.findOne({ listing_url: "https://www.airbnb.com/rooms/10021707" })
+
+// Now, lets get one document, with some data, not all of the data
+//let projection = { name: 1, property_type: 1, amenities: 1 }
+//db.listingsAndReviews.findOne({ _id: '10030955' }, projection)
+
+// Let's remove the _id, because sometimes we don't need to return that prop
+/*let projection = { name: 1, property_type: 1, amenities: 1, _id: 0 }
+db.listingsAndReviews.findOne({ _id: '10030955' }, projection)*/
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    find()
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+// Select the database to use.
+use('learning_data');
+
+// Let's use find() the get all the documents in a collection
+//db.clients.find()
+
+// Now lets get only the document of the male clients
+//db.clients.find({ gender: 'M' })
+
+// Lets add project to get specific props of the docs
+//let projection = { name: 1, age: 1, gender: 1, address: 1 }
+//db.clients.find({ gender: 'M' }, projection)
+
+// Lets get all the clients with the project included
+//db.clients.find({}, projection)
+
+// Lets get all the clients with all the data except the gender prop
+db.clients.find({}, { gender: 0 })

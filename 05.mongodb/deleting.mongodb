@@ -1,0 +1,26 @@
+// Select the database to use.
+use('learning_data')
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    deleteOne:
+    The deleteOne() method allows you to delete a single document from a collection
+  ------------------------------------------------------------------------------------------------------------------
+*/
+db.products.deleteOne({ _id: 1 })
+
+// Using the deleteOne() method to delete the first document from a collection
+//db.products.deleteOne({})
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    deleteMany:
+    The deleteMany() method allows you to remove all documents that match a condition from a collection.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+//db.products.deleteMany({ price: 899 })
+
+// Using the deleteMany() method to delete all documents
+//db.products.deleteMany({})

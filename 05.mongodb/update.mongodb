@@ -1,0 +1,36 @@
+// Select the database to use.
+use('learning_data')
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    updateOne:
+    The updateOne() method allows you to update a single document that satisfies a condition.
+
+    The $set operator allows you to replace the value of a field with a specified value
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+// Update product price, using id as filter
+//db.products.updateOne({ _id: 1 }, { $set: { price: 899 }})
+
+// Using the MongoDB updateOne() method to update the first matching document
+//db.products.updateOne({ price: 899 }, { $set: { price: null }})
+
+// Using the MongoDB updateOne() method to update array elements
+//db.products.updateOne({ _id: 4 }, { $set: { 'storage.0': 16, 'storage.1': 32 } })
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    updateMany:
+    The updateOne() method allows you to update a single document that satisfies a condition.
+
+    The updateMany() method allows you to update all documents that satisfy a condition
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+//db.products.updateMany({ price: 899 }, { $set: { price: 895 }})
+
+// Using the MongoDB updateMany() method to update array elements
+//db.products.updateMany({ price: 895 }, { $set: { 'storage.0': 32, 'storage.1': 128 } })

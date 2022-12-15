@@ -1,0 +1,122 @@
+// Select the database to use.
+//use('learning_data')
+
+//const productProjection = { name: 1, price: 1, _id: 0 }
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $eq:
+    The $eq operator is a comparison query operator that allows you to match documents where the value of a field 
+    equals a specified value
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+// Let's use the eq operator to check if a field equals to a specified value
+//db.products.find({ price: { $eq: 899 } }, productProjection) // Same as: db.products.find({ price: 899 }, productProjection)
+
+// Using the $eq operator to check if a field in an embedded document equals a value
+//db.products.find({ "spec.ram": { $eq: 4 } }, { name: 1, price: 1, _id: 0, spec: 1 })
+
+// Using $eq operator to check if an array element equals a value
+//db.products.find({ color: { $eq: 'black' } }, { name: 1, price: 1, color: 1,  _id: 0 })
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $gt:
+    The $gt operator is a comparison query operator that allows you to select documents where the value of a field 
+    is greater than (>) a specified value.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+const airbnbProjection = { name: 1 }
+
+// Select the database to use.
+use('sample_airbnb')
+
+// Using $gt to select documents where the value of a field is greater than a specified value
+//db.listingsAndReviews.find({ bedrooms: { $gt: 7 } }, { bedrooms: 1 })
+
+// Using the $gt operator to check if the value of a field in an embedded document is greater than a value
+//db.listingsAndReviews.find({ 'review_scores.review_scores_value' : { $gt: 9 } }).count()
+
+// Using the $gt operator to check if the value of a field is after a date
+db.listingsAndReviews.find({ 'last_scraped' : { $gt: new ISODate('2019-03-10') } }).count()
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $gte:
+    The $gte is a comparison query operator that allows you to select documents where a value of a field 
+    is greater than or equal to ( i.e. >=) a specified value
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+// Using $gte operator to select documents where a field is greater than or equal to a specified value
+//db.listingsAndReviews.find({ 'beds' : { $gte: 3 } }).count()
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $lt:
+    The $lt operator is a comparison query operator that allows you to select the documents where the value of 
+    a field is less than a specified value.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+//db.listingsAndReviews.find({ 'beds' : { $lt: 4 } }).count()
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $lte:
+    The $lte is a comparison query operator that allows you to select documents where the value of a field is 
+    less than or equal to ( <= ) a specified value.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+//db.listingsAndReviews.find({ 'beds' : { $lte: 4 } }).count()
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $ne:
+    The $ne is a comparison query operator that allows you to select documents where the value of a filed is 
+    not equal to a specified value. It also includes documents that don’t contain the field.
+
+    The $ne is called the inequality operator. Here is the syntax of the $ne operator
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+//db.listingsAndReviews.find({ 'bedrooms' : { $ne: 2 } }).count()
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $nin:
+    The $nin is a query comparison operator that allows you to find documents where:.
+
+      - the value of the field is not equal to any value in an array
+      - or the field does not exist
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+//db.listingsAndReviews.find({ 'bedrooms' : { $nin: [2, 3] } }).count()
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $in:
+    The $in is a comparison query operator that allows you to select documents where the value of a field is 
+    equal to any value in an array
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+//db.listingsAndReviews.find({ 'bedrooms' : { $in: [2, 4, 7] } }).count()
