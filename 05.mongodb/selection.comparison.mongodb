@@ -42,7 +42,7 @@ use('sample_airbnb')
 //db.listingsAndReviews.find({ 'review_scores.review_scores_value' : { $gt: 9 } }).count()
 
 // Using the $gt operator to check if the value of a field is after a date
-db.listingsAndReviews.find({ 'last_scraped' : { $gt: new ISODate('2019-03-10') } }).count()
+//db.listingsAndReviews.find({ 'last_scraped' : { $gt: new ISODate('2019-03-10') } }).count()
 
 
 

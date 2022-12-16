@@ -1,0 +1,77 @@
+// Select the database to use.
+use('learning_data')
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $avg:
+    The MongoDB $avg returns the average value of numeric values.
+
+    The $avg ignores the non-numeric and missing values. If all values are non-numeric, the $avg returns null.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+// Using the MongoDB $avg to calculate the average quantity for each group.
+/*db.coffees.aggregate([
+  {
+    $group: {
+      _id: '$item',
+      averageQty: { $avg: '$quantity' }
+    }
+  }
+])*/
+
+// Using the MongoDB $avg to calcualte the average amount
+/*db.coffees.aggregate([
+  {
+    $group: {
+      _id: '$item',
+      averageAmount: {
+        $avg: { $multiply: ['$quantity', '$price'] }
+      }
+    }
+  }
+])*/
+
+// Using the MongoDB $avg with $match example
+/*db.coffees.aggregate([
+  {
+    $group: {
+      _id: '$item',
+      averageAmount: {
+        $avg: { $multiply: ['$quantity', '$price'] }
+      }
+    }
+  },
+  { $match: { averageAmount: { $gt: 150 } } },
+  { $sort: { averageAmount: 1 } }
+])*/
+
+
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    $sum:
+    MongoDB $sum returns the sum of numeric values.
+
+    Typically, you apply the $sum to the numeric values. However, if a field contains a non-numeric value, 
+    the $sum ignores that value. Also, if the field doesn’t exist in any document, the $sum returns 0 for that field.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+/*db.coffees.aggregate([
+  {
+    $group: {
+      _id: null,
+      totalQty: { $sum: '$quantity' }
+    }
+  }
+])*/
+
+// Using the MongoDB $sum with an expression
+/*db.coffees.aggregate([
+  {
+    $group: {
+      _id: null,
+      totalAmount: { $sum: { $multiply: ['$price', '$quantity'] } }
+    }
+  }
+])*/

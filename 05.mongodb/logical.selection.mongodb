@@ -54,10 +54,10 @@ use('sample_airbnb')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-//db.listingsAndReviews.find({ bedrooms: { $not: { $gt: 3 } } }).count()
+//db.listingsAndReviews.find({ bedrooms: { $not: { $gte: 3 } } })
 
 // Using MongoDB $not operator to select documents based on expressions
-//db.listingsAndReviews.find({ "address.country": { $not: /^Brazil+/ } }).count()
+//db.listingsAndReviews.find({ "address.country": { $not: /^Brazil+/ } })
 
 
 
@@ -68,7 +68,7 @@ use('sample_airbnb')
     or more query expressions and selects documents that fail all the query expressions.
   ------------------------------------------------------------------------------------------------------------------
 */
-db.listingsAndReviews.find({ $nor: [
+/*db.listingsAndReviews.find({ $nor: [
   { bedrooms: { $lt: 2 } },
   { beds: { $gt: 6 } }
-] }).count()
+] }).count()*/

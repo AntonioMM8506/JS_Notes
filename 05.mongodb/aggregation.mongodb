@@ -1,0 +1,56 @@
+// Select the database to use.
+use('learning_data')
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    MongoDB aggregation operations allow you to process multiple documents and return the calculated results.
+
+    Typically, you use aggregation operations to group documents by specific field values and perform aggregations
+    on the grouped documents to return computed results.
+
+    For example, you can use aggregation operations to take a list of sales orders and calculate
+    the total sales amounts grouped by the products.
+
+    To perform aggregation operations, you use aggregation pipelines. An aggregation pipeline contains one 
+    or more stages that process the input documents
+
+    Each stage in the aggregation pipeline performs an operation on the input documents and returns 
+    the output documents. The output documents are then passed to the next stage. The final stage 
+    returns the calculated result.
+
+    The operations on each stage can be one of the following:
+
+      * $project – select fields for the output documents.
+      * $match – select documents to be processed.
+      * $limit – limit the number of documents to be passed to the next stage.
+      * $skip – skip a specified number of documents.
+      * $sort – sort documents.
+      * $group – group documents by a specified key.
+  ------------------------------------------------------------------------------------------------------------------
+*/
+
+db.coffees.aggregate([
+  {
+    $match: { item: 'Americanos' }
+  },
+  {
+    $group: {
+      _id: '$size',
+      totalQty: { $sum: '$quantity' }
+    }
+  },
+  {
+    $sort: { totalQty: -1 }
+  }
+])
+
+/*
+  select
+    name as _id,
+    sum(quantity) as totalQty
+  from
+    sales
+  where name = 'Americanos'
+  group by name
+  order by totalQty desc;
+*/

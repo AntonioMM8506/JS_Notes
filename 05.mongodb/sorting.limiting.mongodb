@@ -18,7 +18,7 @@ use('learning_data')
 //db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: -1, name: 1 })
 
 // Sorting documetns by dates
-//db.products.find({ releaseDate: { $exists: 1 } }, { name: 1, releaseDate: 1 }).sort({ releaseDate: 1 })
+//db.products.find({ releaseDate: { $exists: 1 } }, { name: 1, releaseDate: 1 }).sort({ releaseDate: -1 })
 
 
 
@@ -28,9 +28,9 @@ use('learning_data')
     To limit the number of returned documents, you use the limit() method
   ------------------------------------------------------------------------------------------------------------------
 */
-//db.products.find({}, { name: 1 }).limit(2)
+//db.products.find({}, { name: 1, price: 1 }).sort({ price: -1 })
 
 // Using MongoDB limit() and skip() to get the paginated result
-db.products.find({}, { name: 1, price: 1 }).sort({ price: -1 }).limit(2).skip(2)
+db.products.find({}, { name: 1, price: 1 }).sort({ price: -1 }).limit(2).skip()
 
 

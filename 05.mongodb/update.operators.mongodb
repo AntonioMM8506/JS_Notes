@@ -9,7 +9,7 @@ use('learning_data')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-db.products.updateOne({ _id: 1 }, { $inc: { price: 50 } })
+//db.products.updateOne({ _id: 1 }, { $inc: { price: 50 } })
 
 // Using the MongoDB $inc operator to decrease the value of a field
 //db.products.updateOne({ _id: 1 }, { $inc: { price: -50 } })
