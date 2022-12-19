@@ -1,0 +1,42 @@
+// Select the database to use.
+use('learning_data')
+
+db.students.drop()
+db.studentAddresses.drop()
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    Reference model relationship
+  ------------------------------------------------------------------------------------------------------------------
+*/
+/*const newStudent = {
+  name: 'Ishan',
+  studentId: 'k_hut_2022',
+  branch: 'CSE'
+}
+const newStudentAddress = {
+  studentId: 'k_hut_2022',
+  address: '123 Street',
+  city: 'Tokio'
+}
+
+// Insert data
+db.students.insertOne(newStudent)
+db.studenAddresses.insertOne(newStudentAddress)*/
+
+/* 
+  ------------------------------------------------------------------------------------------------------------------
+    Embedded model relationship
+  ------------------------------------------------------------------------------------------------------------------
+*/
+const embeddedStudent = {
+  name: 'Kanya',
+  studentId: 'k_nyas_2000',
+  branch: 'CSE',
+  address: {
+    address: '123 Street',
+    city: 'Tokio'
+  }
+}
+// Insert data
+db.students.insertOne(embeddedStudent)

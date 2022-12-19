@@ -1,0 +1,61 @@
+// Select the database to use.
+use('learning_data')
+
+/*db.restaurants.drop()
+
+const point = {
+  name: 'Pizza hut',
+  location: {
+    type: "Point",
+    coordinates: [ -100.316116, 25.686613] // [ long, lat ]
+  }
+}
+
+// Extra data
+const extraPoints = [
+  { name: 'KFC', location: { type: 'Point', coordinates: [ -100.267657, 25.735711 ] } },
+  { name: 'Taquitos', location: { type: 'Point', coordinates: [ -100.464350, 25.678533 ] } },
+  { name: 'Tortas', location: { type: 'Point', coordinates: [ -100.109059, 25.885959 ] } },
+  { name: 'Dominos', location: { type: 'Point', coordinates: [ -100.187389, 25.774711 ] } },
+  { name: 'Taco Bell', location: { type: 'Point', coordinates: [ -100.013198, 25.268910 ] } },
+]
+
+// Insert data
+db.restaurants.insertOne(point)
+db.restaurants.insertMany(extraPoints)*/
+
+// Lets create a geospatial index
+//db.restaurants.createIndex({ location: "2dsphere" })
+
+// Lets do some searching
+//db.restaurants.find({ location: { $near: { $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
+
+// Lets use maxDistance to narrow down the search, maxDistance uses meters
+//db.restaurants.find({ location: { $near: { $maxDistance: 10000, $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
+
+// Lets use minDistance to start looking from an specific distance
+//db.restaurants.find({ location: { $near: { $minDistance: 30000, $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
+
+// Let's work with a polygon
+/*db.cities.drop()
+
+const polygon = {
+  city: 'Monterrey',
+  location: {
+    type: 'Polygon',
+    coordinates: [[
+      [-100.218039, 25.673810],
+      [-100.162660, 25.778144],
+      [-100.305802, 25.788109],
+      [-100.401390, 25.752244],
+      [-100.461006, 25.696868],
+      [-100.375116, 25.660357],
+      [-100.297473, 25.669021],
+      [-100.218039, 25.673810]
+    ]]
+  }
+}
+db.cities.insertOne(polygon)*/
+
+//db.cities.find({ location: { $geoIntersects: { $geometry: { type: 'Point', coordinates: [-100.300221, 25.742646] } } }}, { city: 1 })
+//db.cities.find({ location: { $geoIntersects: { $geometry: { type: 'Point', coordinates: [-100.131328, 25.400891] } } }})
