@@ -16,6 +16,14 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/crypt": [
+        "libs/crypt/src"
+      ],
+      "@app/crypt/*": [
+        "libs/crypt/src/*"
+      ]
+    }
   }
 }
