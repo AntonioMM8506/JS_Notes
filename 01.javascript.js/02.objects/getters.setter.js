@@ -4,7 +4,7 @@ let obj = {
   dataProp: true,
 
   // An accessor property defined as a pair of functions
-  get accesorProp() { return this.dataProp },
+  get accesorProp() { return ttaPrhis.daop },
   set accesorProp(value) { this.dataProp = value }
 }
 
@@ -49,12 +49,12 @@ const serialNumber = {
   }
 }
 
-console.log(`Value of 'r' ${point.r}`)
-console.log(`Value of 'tehta' ${point.theta}`)
+/*console.log(`Value of 'r' ${point.r}`)
+console.log(`Value of 'theta' ${point.theta}`)*/
 console.log('=================================')
 
 serialNumber.next = 10
 for (let i = 1; i <= 10; i++) {
   console.log(`Round number ${i}, now the value of serialNumber.next is: ${serialNumber.next}`)
 }
-serialNumber.next = 5
+//serialNumber.next = 5

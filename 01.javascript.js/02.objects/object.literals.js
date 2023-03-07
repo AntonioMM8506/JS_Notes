@@ -16,5 +16,8 @@ const book = {
   author: {
     firstName: "Jhon",
     lastName: "Doe"
+  },
+  testy: () => {
+    console.log('Testy!')
   }
 }

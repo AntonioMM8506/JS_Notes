@@ -1,6 +1,6 @@
 // Combining push() and pop() to implement fifo stack
-let stack = []
-/*stack.push(1,2) // [1,2]
+/*let stack = []
+stack.push(1,2) // [1,2]
 console.log(stack)
 stack.pop()
 console.log(stack)

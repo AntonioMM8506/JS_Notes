@@ -7,10 +7,11 @@ const otherFlattenedArray = [1, [2, [3]]].flat() // [1, 2, [3]]
 
 // Now we will pass the nesting level of flattening
 const arrayOne = [1, [2, [3, [4]]]]
-console.log(arrayOne.flat(1))
-console.log(arrayOne.flat(2))
-console.log(arrayOne.flat(3))
-console.log(arrayOne.flat(4))
+//console.log(arrayOne.flat(1))
+//console.log(arrayOne.flat(2))
+//console.log(arrayOne.flat(3))
+//console.log(arrayOne.flat(4))
+//console.log(arrayOne.flat(Infinity))
 
 
 /*
@@ -24,7 +25,7 @@ let phrases = [
 ]
 let words = phrases.flatMap(phrase => phrase.split(" "))
 // Let's print the array
-console.log(words)
+//console.log(words)
 
 // Map non-negative numbers to their square roots
 const squareRoots = [-2, -1, 1, 2].flatMap(x => x < 0 ? [] : Math.sqrt(x))

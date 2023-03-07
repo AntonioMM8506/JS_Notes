@@ -8,7 +8,7 @@ for (let letter of letters) {
 
 // Iterating array elements and we need to get the index of the element using for/of loop
 for (let [index, letter] of letters.entries()) {
-  //console.log(`The letter "${letter}" has an index of ${index}`)
+  // console.log(`The letter "${letter}" has an index of ${index}`)
 }
 
 // Now lets iterate the array using forEach method

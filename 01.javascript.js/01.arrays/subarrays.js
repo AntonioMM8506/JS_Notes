@@ -3,11 +3,11 @@
     Array.slice()
   ----------------------------------------------------------------------------------
 */
-let sliceArray = [1,2,3,4,5]
+let sliceArray = [1,2,3,4,5] // 0, 1, 2, 3, 4
 console.log(sliceArray.slice(0,3)) // [1,2,3]
-console.log(sliceArray.slice(3) )// [4,5]
+console.log(sliceArray.slice(3)) // [4,5]
 console.log(sliceArray.slice(1,-1)) // [2,3,4]
-console.log(sliceArray.slice(-3,-2))// [3]
+console.log(sliceArray.slice(-3,-2))// [3]*/
 console.log('---------------------------------------------')
 
 

@@ -13,7 +13,7 @@ const book = {
 const temporalBook = Object.create(book)
 temporalBook.propertyIsEnumerable("toString")
 for (let prop in temporalBook) {
-  console.log(prop)
+  //console.log(prop)
 }
 console.log('=================================')
 

@@ -4,9 +4,10 @@
   ----------------------------------------------------------------------------------
 */
 let indexArray = [0,1,2,1,0]
-console.log(indexArray.indexOf(1))
-console.log(indexArray.lastIndexOf(1))
-console.log(indexArray.indexOf(3))
+indexArray[-1] = 1 // Not work
+//console.log(indexArray.indexOf(1))
+//console.log(indexArray.lastIndexOf(1))
+//console.log(indexArray.indexOf(3))
 
 // Find all occurrences of a value x in an array a and return an array of matching indexes
 function findAll(a, x) {
@@ -23,7 +24,7 @@ function findAll(a, x) {
 
   return results
 }
-const searching = findAll(['hello', 'green', 'red', 'beer', 'hello', 'yeah'], 'hello')
+const searching = findAll(['hello', 'green', 'red', 'beer', 'hello', 'yeah'], 'red')
 console.log(`We found: [${searching}]`)
 console.log('---------------------------------------------')
 

@@ -3,11 +3,13 @@ let animal = {
   eats: true,
   walk: () => {}
 }
+//console.log(animal)
 
 let feline = {
   __proto__: animal,
   isMammal: true
 }
+//console.log(feline)
 
 let lion = {
   legs: 4,

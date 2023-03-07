@@ -50,13 +50,14 @@ let messageArray = [...new Set(message)]
   ----------------------------------------------------------------------------------
 */
 // Call it with no arguments
-let noArgs = new Array()
+let noArgs = new Array() // []
 
 // Call it with a single numeric argument
 let oneSingleNumericArg = new Array(10)
 
 // Explicitly specify the elements
 let arrayWithArgs = new Array(10, 20, 'Jhon Doe', false)
+//console.log(arrayWithArgs)
 
 /*
   ----------------------------------------------------------------------------------
@@ -64,9 +65,11 @@ let arrayWithArgs = new Array(10, 20, 'Jhon Doe', false)
   ----------------------------------------------------------------------------------
 */
 // Using Array.of() to create new arrays
-let ofEmptyArray = Array.of()
+let ofEmptyArray = Array.of() // new Array()
 let ofOneArg = Array.of(10)
 let ofArray = Array.of(1,2,3)
+//console.log(ofArray)
 
 // Crearing an array copy using Array.from()
 let fromCopy = Array.from(original)
+console.log(fromCopy)

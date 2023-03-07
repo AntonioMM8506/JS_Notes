@@ -10,9 +10,11 @@ const book = {
 }
 
 let stringified = JSON.stringify(book)
-console.log(`Value of a stringified variable: ${ stringified }`)
+//console.log(`Value of a stringified variable: ${ stringified }`)
 //console.log(`Other way to stringifying an object ${JSON.stringify(book)}`)
 
 let parsed = JSON.parse(stringified)
 console.log(`Value of a parsed variable:`) // 'Variable of parsed variable: ' + JSON.stringify(parsed)
 console.log(parsed)
+
+const price = book.price.toString()

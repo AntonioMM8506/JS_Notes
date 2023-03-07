@@ -11,4 +11,4 @@ for (let row = 0; row < table.length; row++) {
 }
 
 // Now we can use the multidimensional array to compute 5 * 7
-console.log(table[5][7])
+console.log(table[2][5])

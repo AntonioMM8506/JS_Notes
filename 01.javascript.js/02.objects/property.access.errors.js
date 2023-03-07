@@ -31,6 +31,7 @@ if (book) {
 // Concise and idiomatic way to gett lastName
 lastName = book && book.author && book.author.lastName
 tempo1 = book?.author?.subTitle // Conditional property access or Optional chaining
+console.log(tempo1)
 
 // Set a property on undefined
-//book.temporal.var = 2
+book.temporal.var = 2
