@@ -7,20 +7,20 @@ const myCallback = () => {
 // First, you will see the message "Here we go!"
 // Then you will see the message "The road ends here!"
 // And last you will see the message "The time is up!"
-console.log('Here we go!')
-//setTimeout(myCallback, 1000)
-console.log('The road ends here!')
+/*console.log('Here we go!')
+setTimeout(myCallback, 1000)
+console.log('The road ends here!')*/
 
 // Lets do another example of callback, now, we will check for updates every second for 10 seconds
-let times = 1
-/*let checkForUpdates = setInterval(() => {
+/*let times = 1
+let checkForUpdates = setInterval(() => {
   console.log(`Checking for updates (${times})`)
   times++
 
   if (times > 10) stopCheckingForUpdates()
-}, 1000)*/
+}, 1000)
 
-const stopCheckingForUpdates = () => clearInterval(checkForUpdates)
+const stopCheckingForUpdates = () => clearInterval(checkForUpdates)*/
 
 
 /*
@@ -33,7 +33,7 @@ const correctFile = 'dummy.json'
 const incorrectFile = 'incorrect.json'
 
 // Lets read a file and using callbacks, we will process the data
-fs.readFile(correctFile, 'utf-8', (err, data) => {
+fs.readFile(incorrectFile, 'utf-8', (err, data) => {
   if (err) {
     // If there was an error, we display the error
     console.warn('Something went wrong!', err)

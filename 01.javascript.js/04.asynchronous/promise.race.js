@@ -9,7 +9,7 @@ const p1 = new Promise((resolve, reject) => {
 const p2 = new Promise((resolve, reject) => {
   setTimeout(() => {
       console.log('The second promise has resolved')
-      resolve(20)
+      reject(20)
   }, 2 * 1000)
 })
 

@@ -1,5 +1,7 @@
 // ES6 class syntax
 class Person {
+  // Class declaration
+  // Use strict
   constructor(name, age, gender) {
     this.name = name
     this.age = age

@@ -38,7 +38,7 @@ console.log(`The perimeter of the rectangle is ${customRectangle.perimeter()}`)
 console.log('=================================')
 
 const customPrivateRectangle = new PrivateRectangle()
-console.log(`The private width of the rectangle is ${customPrivateRectangle.getPrivateWidth()}`)
-console.log(`The private perimeter is ${customPrivateRectangle.getPrivatePerimeter()}`)
-//console.log(`Value of width: ${customPrivateRectangle.width}`)
+/*console.log(`The private width of the rectangle is ${customPrivateRectangle.getPrivateWidth()}`)
+console.log(`The private perimeter is ${customPrivateRectangle.getPrivatePerimeter()}`)*/
+console.log(`Value of width: ${customPrivateRectangle.width}`)
 

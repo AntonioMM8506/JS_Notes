@@ -3,11 +3,11 @@
   All promises fulfilled example
 ----------------------------------------------------------------------------------
 */
-const p1 = new Promise((resolve, reject) => {
+/*const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     console.log('Promise 1 fulfilled')
     resolve(1)
-  }, 1000)
+  }, 2000)
 })
 
 const p2 = new Promise((resolve, reject) => {
@@ -19,7 +19,7 @@ const p2 = new Promise((resolve, reject) => {
 // Let's use Promise.any to execute both promises
 const p = Promise.any([p1,p2])
 // Now we need to print the result
-/*p.then((value) => {
+p.then((value) => {
   console.log('Returned promise')
   console.log(value)
 })*/
@@ -34,7 +34,7 @@ const p = Promise.any([p1,p2])
   One promise rejected example
 ----------------------------------------------------------------------------------
 */
-const p3 = new Promise((resolve, reject) => {
+/*const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
     console.log('Promise 1 rejected')
     reject('error')
@@ -48,7 +48,7 @@ const p4 = new Promise((resolve, reject) => {
 })
 
 const prom = Promise.any([p3, p4])
-/*prom.then((value) => {
+prom.then((value) => {
   console.log('Returned Promise')
   console.log(value)
 })*/
@@ -71,7 +71,13 @@ const p6 = new Promise((resolve, reject) => {
     reject('error2')
   }, 2000)
 })
-const otherP = Promise.any([p5,p6])
+const p7 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('Promise 3 rejected')
+    reject('error3')
+  }, 3000)
+})
+const otherP = Promise.any([p5,p6,p7])
 otherP.catch((e) => {
   console.log('Returned promise')
   console.log(e, e.errors)

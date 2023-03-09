@@ -1,13 +1,13 @@
 // Let's create a basic example of async/await syntax
-async function sayHi() {
+function sayHi() {
   return Promise.resolve('Hi, there!')
 }
 // Creating a new function to print a message
-const display = async () => {
+/*const display = async () => {
   let result = await sayHi()
   console.log(result)
 }
-display()
+display()*/
 // The following code won't work
 /*const errorDisplay = () => {
   let result = await sayHi()

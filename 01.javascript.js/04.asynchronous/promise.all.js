@@ -1,6 +1,6 @@
 // The following promises resolve to 10, 20, and 30 after 1, 2, and 3 seconds. 
 // We use the setTimeout() to simulate the asynchronous operations
-const p1 = new Promise((resolve, reject) => {
+/*const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     console.log('The first promise has resolved')
     resolve(10)
@@ -20,7 +20,7 @@ const p3 = new Promise((resolve, reject) => {
 })
 
 // Now lets use Promise.all to run all the promises at the same time
-/*Promise.all([p1, p2, p3]).then((results) => {
+Promise.all([p1, p2, p3]).then((results) => {
   const total = results.reduce((p,c) => p + c) // We just calculate all the resolved values for each promise
 
   // Printing some info, related to the promises

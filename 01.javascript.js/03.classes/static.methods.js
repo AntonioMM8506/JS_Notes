@@ -30,7 +30,7 @@ let thirdClassInstance = new Square(10)
 //console.log(`Bigger perimeter?: ${ thirdClassInstance.comparePerimeter(firstClassInstance, secondClassInstance) }`)
 
 // Correct way
-//console.log(`Bigger perimeter?: ${Square.comparePerimeter(firstClassInstance, secondClassInstance)}`)
+// console.log(`Bigger perimeter?: ${Square.comparePerimeter(firstClassInstance, secondClassInstance)}`)
 //console.log('=================================')
 
 /*
@@ -55,8 +55,8 @@ class User {
   }
 
   static logingHelloEmail() {
-    this.checkValidEmail(this.helloEmail)
-    //User.checkValidEmail(User.helloEmail)
+    //this.checkValidEmail(User.helloEmail)
+    User.checkValidEmail(this.helloEmail)
   }
 }
 //User.logingHelloEmail()

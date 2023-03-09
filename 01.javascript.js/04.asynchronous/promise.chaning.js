@@ -6,22 +6,22 @@ let p = new Promise((resolve, reject) => {
 })
 
 // Using the p promise function
-p.then((result) => {
-  /*console.log(result)
-  return result * 2*/
-})
-
-// Because the then() method returns a new Promise with a value resolved to a value, 
-// you can call the then() method on the return Promise like this:
 /*p.then((result) => {
   console.log(result)
   return result * 2
-}).then((result) => {
-  console.log(result)
-  return result * 3
-}).then((result) => {
-  console.log(result)
-  return result * 4
+})*/
+
+// Because the then() method returns a new Promise with a value resolved to a value, 
+// you can call the then() method on the return Promise like this:
+/*p.then((result) => { // 10
+  console.log(result) // 10
+  return result * 2 // 20
+}).then((result) => { // 20
+  console.log(result) // 20
+  return result * 3 // 60
+}).then((result) => { // 60
+  console.log(result) // 60
+  return result * 4 // 240
 })*/
 //  You can keep calling the then() method successively
 

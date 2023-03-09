@@ -36,13 +36,14 @@ const promiseGetUsers = () => {
 }
 // Just for fun lest create a functoin that prints out the given user info
 const onFulfilled = (users) => {
+  console.log('Inside promise')
   console.log(users)
 }
 // Now, let's run the promise function
 const promise = promiseGetUsers()
 //console.log('Waiting for the promise to be fulfilled!')
 // Using then method to print the users
-//promise.then(onFulfilled)
+promise.then(onFulfilled)
 // Another way to handle the promise result
 /*promise.then((users) => {
   console.log(users[0])
@@ -54,7 +55,7 @@ const promise = promiseGetUsers()
   ----------------------------------------------------------------------------------
 */
 // Change the value of success to see resolver (true) or reject (false)
-let success = true
+let success = false
 
 // Using the "same" promiseGetUsers function as a baseline, we will change the code a bit
 const getStudents = () => {
