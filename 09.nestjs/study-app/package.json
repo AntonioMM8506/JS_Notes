@@ -22,10 +22,12 @@
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/mongoose": "^9.2.2",
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/swagger": "^6.2.1",
     "@nestjs/throttler": "^4.0.0",
     "helmet": "^6.0.1",
+    "mongoose": "^7.0.2",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
@@ -67,6 +69,11 @@
       "**/*.(t|j)s"
     ],
     "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/../src/$1",
+      "^@config/(.*)$": "<rootDir>/../src/config/$1",
+      "^@features/(.*)$": "<rootDir>/../src/features/$1"
+    }
   }
 }

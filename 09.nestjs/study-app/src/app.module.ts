@@ -4,12 +4,36 @@ import { AppService } from './app.service'
 
 // Import custom libraries
 import { ThrottlerModule } from '@nestjs/throttler'
+import { ConfigModule, ConfigService } from '@nestjs/config'
+import { MongooseModule } from '@nestjs/mongoose'
+
+// Import config files
+import { throttlerConfig, databaseConfig } from '@config/index'
 
 @Module({
   imports: [
-    ThrottlerModule.forRoot({
-      ttl: 60,
-      limit: 10,
+    // Config module (env vars)
+    ConfigModule.forRoot({
+      isGlobal: true,
+      cache: true,
+      load: [throttlerConfig, databaseConfig],
+    }),
+    // Rate limit
+    ThrottlerModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        ttl: configService.get<number>('throttler.ttl'),
+        limit: configService.get<number>('throttler.limit'),
+      }),
+    }),
+    // MongoDB connection
+    MongooseModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => ({
+        uri: configService.get<string>('database.mongoConnectionString'),
+      }),
     }),
   ],
   controllers: [AppController],

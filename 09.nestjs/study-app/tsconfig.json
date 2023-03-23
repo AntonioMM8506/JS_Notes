@@ -16,6 +16,14 @@
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      // alias for root folder
+      "@/*" : ["src/*"],
+      // alias for config folder
+      "@config/*": ["src/config/*"],
+      // alias for features folder
+      "@features/*": ["src/features/*"]
+    }
   }
 }
