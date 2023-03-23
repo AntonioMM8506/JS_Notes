@@ -8,4 +8,11 @@ click = 'click'
 
 // A useful way to use string literals
 let mouseEvent: 'click' | 'dbClick' | 'mouseUp' | 'mouseDown'
+enum events {
+  click,
+  dbClick,
+  mouseUp,
+  mouseDown
+}
 mouseEvent = 'dbClick'
+let customMouseEvent: events = events.dbClick

@@ -5,10 +5,10 @@ interface Country {
 }
 
 // Using interface in a function
-const americanCountry = (country: Country) => {
+const americanCountry = (country: Country) : string => {
   return `The population of ${ country.name } is ${country.population}`
 }
-console.log(americanCountry({name: 'Mexico', population: 120000000}))
+//console.log(americanCountry({name: 'Mexico', population: 120000000}))
 // Lets declare an object, because we have a name and population with the correct type, ts does not care about extra properties
 let mexico = {
   name: 'Mexico',

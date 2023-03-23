@@ -37,5 +37,5 @@ class BabyGirl {
 }
 
 let babyLisa = new BabyGirl()
-babyLisa.fullName = 'Lisa Golden'
+babyLisa.fullName = 'Lisa Golden Winston'
 console.log(`Baby girl name is: ${babyLisa.fullName}`)

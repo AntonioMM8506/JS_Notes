@@ -5,10 +5,12 @@ const log = (message: string): void => {
 log('What a day!')
 
 // TS infer func type
-const infereLog = () => {
-  console.log('Never mind!')
+const infereLog = (message: string) => {
+  console.log(message)
 }
+infereLog('Never mind!')
 
 // If we use void in a var, the var can olny have undefined as value
 let useless: void = undefined
-//useless = 1
+let myUseless: undefined = undefined
+// useless = 1

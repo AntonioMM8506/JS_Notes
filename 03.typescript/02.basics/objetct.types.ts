@@ -6,13 +6,13 @@ employee = {
   lastName: 'Doe',
   age: 25
 }
-console.log(employee)
+//console.log(employee)
 
 // You will get an error if you try to reassign any primitive value to an object
 //employee = 'Jane'
 
 // If you try to access a property that does not exists, you will get an error
-//console.log(employee.hireDate)
+// console.log(employee.hireDate)
 
 // Explicitly specify properties of an oject, declare the object first
 let teacher: {
@@ -36,4 +36,14 @@ let car: {
   brand: 'Toyota',
   wheels: 4,
   isSport: false
+}
+
+type myProps = {
+  propOne: boolean,
+  propTwo: number
+}
+
+let objectCustom: myProps = {
+  propOne: true,
+  propTwo: 18
 }

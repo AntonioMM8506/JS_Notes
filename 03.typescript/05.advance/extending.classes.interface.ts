@@ -1,6 +1,6 @@
 // Basic way to extend class into a interface
 class Control {
-  private state: boolean
+  private state: boolean = true
 }
 
 interface StatefulControl extends Control {

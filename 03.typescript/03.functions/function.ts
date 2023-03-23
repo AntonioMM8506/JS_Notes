@@ -18,7 +18,8 @@ function promiseFunc(): Promise<string> {
 }
 
 // Function, in this case TS will infer the function type
-function times(a: number, b: number): (number | string) {
+type myAlias = number | string
+function times(a: number, b: number): (myAlias) {
   return a * b
 }
 

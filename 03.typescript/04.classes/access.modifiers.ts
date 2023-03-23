@@ -68,5 +68,5 @@ class ProtectedPerson {
 const newProtectedPerson: ProtectedPerson = new ProtectedPerson(28, 'Jack', 'Lopez')
 //console.log(`Hi, my name is ${newProtectedPerson.firstName}`) // Try to use class prperties
 //console.log(`Hi, my name is ${newProtectedPerson.getFullName()}`) // Try to use class method
-// console.log(`Hi, my name is ${newProtectedPerson.printFullName()}`) // Try to use class method
+//console.log(`Hi, my name is ${newProtectedPerson.printFullName()}`) // Try to use class method
 

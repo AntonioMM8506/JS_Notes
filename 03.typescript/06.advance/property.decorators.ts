@@ -29,12 +29,14 @@ const allowlistOnly = (target: any, memberName: string) => {
 class PersonC {
   @allowlistOnly
   name: string = 'Jon'
+
+  age: number = 18
 }
 
 const person = new PersonC()
-console.log(person.name)
+//console.log(person.name)
 
-person.name = 'Peter'
+person.name = 'Juan'
 console.log(person.name)
 
 person.name = 'Jane'

@@ -8,3 +8,7 @@ type alphanumeric = string | number
 let input: alphanumeric
 input = 'Hi'
 input = 100
+
+type customNames = 'John' | 'Jane' | 'Pete'
+let names: customNames
+names = 'John'

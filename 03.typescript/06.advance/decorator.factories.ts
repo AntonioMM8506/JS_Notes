@@ -1,6 +1,8 @@
 // Basic implementation of decorator factories
 const decoratorA = (someBooleanFlag: boolean) => {
-  return (target: Function) => {}
+  return (target: Function) => {
+    // Function body...
+  }
 }
 
 @decoratorA(false)

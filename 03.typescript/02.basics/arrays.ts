@@ -5,7 +5,7 @@ let numberArray: number[] = [100, 3.1416, -546, 0b100, 0XA, 0o10] // Int, Float,
 // Add more elements to an array
 students[3] = 'Joshua'
 students.push('Leonora')
-//students.push(1050)
+// students.push(1050)
 
 // Array element type inference
 let student = students[2]
@@ -17,7 +17,8 @@ let student = students[2]
 let series: number[]
 series = [1, 2, 3, 4]
 let doubleIt = series.map(e => e*2)
-//console.log(doubleIt)
+console.log(doubleIt)
 
 // Union types in arrays
-const mixinData: (string | boolean)[] = ['Football', false, true]
+type aliasArray = string | boolean
+const mixinData: aliasArray[] = ['Football', false, true]

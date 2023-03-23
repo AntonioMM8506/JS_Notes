@@ -3,11 +3,11 @@ const raiseError = (message: string): never => {
   throw new Error(message)
 }
 
-try {
+/*try {
   raiseError('Undefined error')
 } catch (error) {
   console.error(error)
-}
+}*/
 
 // Inferred type
 function reject() {

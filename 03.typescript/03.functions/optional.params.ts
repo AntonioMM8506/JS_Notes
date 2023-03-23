@@ -6,3 +6,11 @@ function multi(a: number, b: number, c?: number): number {
   
   return a * b
 }
+
+type user = {
+  firstName: string,
+  lastName?: string,
+  hasChildren?: boolean
+}
+
+const customUser: user = { firstName: 'John' }

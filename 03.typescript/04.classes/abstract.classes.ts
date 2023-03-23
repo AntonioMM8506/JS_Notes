@@ -1,5 +1,5 @@
 // Basic implementation of an abstract class
-abstract class Employee {
+abstract class Employees {
   constructor(private firstName: string, private lastName: string) {}
 
   // Declare an empty abstract method
@@ -15,10 +15,10 @@ abstract class Employee {
 }
 
 // An abstract class can't create a new object from itself, this will throw an error
-//const newEmployee = new Employee('Larry', 'Fines')
+//const newEmployee = new Employees('Larry', 'Fines')
 
 // We need to extend employee class into another class
-class FullTimeEmployee extends Employee {
+class FullTimeEmployee extends Employees {
   constructor(firstName: string, lastName: string, private salary: number) {
       super(firstName, lastName);
   }
@@ -28,7 +28,7 @@ class FullTimeEmployee extends Employee {
   }
 }
 
-class Contractor extends Employee {
+class Contractor extends Employees {
   constructor(firstName: string, lastName: string, private rate: number, private hours: number) {
       super(firstName, lastName);
   }

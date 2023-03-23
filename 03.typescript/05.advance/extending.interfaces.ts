@@ -4,7 +4,7 @@ interface Mailable {
   queue(email: string): boolean
 }
 interface FutureMailable extends Mailable {
-  later(email: string, after: number): boolean
+  later(email: string, after: number): boolean // 3
 }
 // Lets use FutureMailable
 class FirstMail implements FutureMailable {
@@ -24,9 +24,9 @@ class FirstMail implements FutureMailable {
   }
 }
 const myMailClass = new FirstMail()
-myMailClass.later('test@example.com', 1000)
+/*myMailClass.later('test@example.com', 1000)
 myMailClass.send('test@example.com')
-myMailClass.queue('test@example.com')
+myMailClass.queue('test@example.com')*/
 
 // Lets create a other mailable interface
 interface IncompleteMailable {
