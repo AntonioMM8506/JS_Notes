@@ -10,6 +10,9 @@ import { MongooseModule } from '@nestjs/mongoose'
 // Import config files
 import { throttlerConfig, databaseConfig } from '@config/index'
 
+// Import app features
+import { UsersModule } from '@features/users/users.module'
+
 @Module({
   imports: [
     // Config module (env vars)
@@ -35,6 +38,7 @@ import { throttlerConfig, databaseConfig } from '@config/index'
         uri: configService.get<string>('database.mongoConnectionString'),
       }),
     }),
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
