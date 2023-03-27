@@ -10,8 +10,10 @@ import { MongooseModule } from '@nestjs/mongoose'
 // Import config files
 import { throttlerConfig, databaseConfig } from '@config/index'
 
-// Import app features
-import { UsersModule } from '@features/users/users.module'
+// Import feature modules
+import { UsersModule } from './features/users/users.module'
+import { AuthModule } from './features/auth/auth.module'
+import { ProductsModule } from './features/products/products.module'
 
 @Module({
   imports: [
@@ -39,6 +41,8 @@ import { UsersModule } from '@features/users/users.module'
       }),
     }),
     UsersModule,
+    AuthModule,
+    ProductsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

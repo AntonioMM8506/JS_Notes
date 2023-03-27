@@ -1,4 +1,5 @@
 import { NestFactory } from '@nestjs/core'
+import { ValidationPipe } from '@nestjs/common'
 import { AppModule } from './app.module'
 
 // Import custom libraries
@@ -10,6 +11,9 @@ async function bootstrap() {
 
   //app.enableCors();
   app.use(helmet())
+
+  // Add global validation pipe
+  app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }))
 
   // Setup api documentation
   const configSwagger = new DocumentBuilder()
