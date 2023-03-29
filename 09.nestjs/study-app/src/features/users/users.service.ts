@@ -7,6 +7,8 @@ import { Model } from 'mongoose'
 import { InjectModel } from '@nestjs/mongoose'
 import { User, UserDocument } from './entities/user.entity'
 
+import { MongoExceptionFilter } from '@/libs/filters'
+
 @Injectable()
 export class UsersService {
   constructor(@InjectModel(User.name) private userModel: Model<UserDocument>) {}
