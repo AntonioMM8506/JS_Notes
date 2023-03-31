@@ -1,0 +1,16 @@
+# Versioning files
+.git
+.gitignore
+.dockerignore
+
+# Build dependencies
+dist.do
+node_modules
+
+# Enviroment files
+.env
+
+# Misc
+.eslintrc.js
+.prettierrc
+README.md

@@ -5,10 +5,10 @@
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/gateway/tsconfig.app.json"
+    "tsConfigPath": "apps/monorepo/tsconfig.app.json"
   },
   "monorepo": true,
-  "root": "apps/gateway",
+  "root": "apps/monorepo",
   "projects": {
     "monorepo": {
       "type": "application",
@@ -19,22 +19,13 @@
         "tsConfigPath": "apps/monorepo/tsconfig.app.json"
       }
     },
-    "gateway": {
+    "my-app": {
       "type": "application",
-      "root": "apps/gateway",
+      "root": "apps/my-app",
       "entryFile": "main",
-      "sourceRoot": "apps/gateway/src",
+      "sourceRoot": "apps/my-app/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/gateway/tsconfig.app.json"
-      }
-    },
-    "crypt": {
-      "type": "library",
-      "root": "libs/crypt",
-      "entryFile": "index",
-      "sourceRoot": "libs/crypt/src",
-      "compilerOptions": {
-        "tsConfigPath": "libs/crypt/tsconfig.lib.json"
+        "tsConfigPath": "apps/my-app/tsconfig.app.json"
       }
     }
   }
