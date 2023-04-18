@@ -1,12 +1,12 @@
 // Select the database to use.
 use('learning_data')
 
-/*db.restaurants.drop()
+//db.restaurants.drop()
 
 const point = {
   name: 'Pizza hut',
   location: {
-    type: "Point",
+    type: "Point", // Point or Polygon
     coordinates: [ -100.316116, 25.686613] // [ long, lat ]
   }
 }
@@ -21,14 +21,14 @@ const extraPoints = [
 ]
 
 // Insert data
-db.restaurants.insertOne(point)
-db.restaurants.insertMany(extraPoints)*/
+//db.restaurants.insertOne(point)
+//db.restaurants.insertMany(extraPoints)
 
 // Lets create a geospatial index
 //db.restaurants.createIndex({ location: "2dsphere" })
 
 // Lets do some searching
-//db.restaurants.find({ location: { $near: { $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
+//db.restaurants.find({ location: { $near: { $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } }) // lng lat
 
 // Lets use maxDistance to narrow down the search, maxDistance uses meters
 //db.restaurants.find({ location: { $near: { $maxDistance: 10000, $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
@@ -37,7 +37,7 @@ db.restaurants.insertMany(extraPoints)*/
 //db.restaurants.find({ location: { $near: { $minDistance: 30000, $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
 
 // Let's work with a polygon
-/*db.cities.drop()
+//db.cities.drop()
 
 const polygon = {
   city: 'Monterrey',
@@ -55,7 +55,7 @@ const polygon = {
     ]]
   }
 }
-db.cities.insertOne(polygon)*/
+//db.cities.insertOne(polygon)
 
-//db.cities.find({ location: { $geoIntersects: { $geometry: { type: 'Point', coordinates: [-100.300221, 25.742646] } } }}, { city: 1 })
+db.cities.find({ location: { $geoIntersects: { $geometry: { type: 'Point', coordinates: [-100.300221, 25.742646] } } }}, { city: 1 })
 //db.cities.find({ location: { $geoIntersects: { $geometry: { type: 'Point', coordinates: [-100.131328, 25.400891] } } }})

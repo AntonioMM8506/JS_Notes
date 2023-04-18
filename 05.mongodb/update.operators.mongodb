@@ -9,13 +9,13 @@ use('learning_data')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-//db.products.updateOne({ _id: 1 }, { $inc: { price: 50 } })
+db.products.updateOne({ _id: 1 }, { $inc: { price: 50 } }) // 200 --> 250
 
 // Using the MongoDB $inc operator to decrease the value of a field
-//db.products.updateOne({ _id: 1 }, { $inc: { price: -50 } })
+db.products.updateOne({ _id: 1 }, { $inc: { price: -50 } }) // 200 --> 150
 
 // Using MongoDB $inc operator to update values of multiple fields
-//db.products.updateOne({ _id: 1 }, { $inc: { price: 50, 'spec.ram': 4 } })
+db.products.updateOne({ _id: 1 }, { $inc: { price: 50, 'spec.ram': 4 } }) // price: 200 --> 250, spec.ram: 4 --> 8 
 
 
 
@@ -29,10 +29,10 @@ use('learning_data')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-//db.products.updateOne({ _id: 1 }, { $unset: { price: "" } })
+db.products.updateOne({ _id: 1 }, { $unset: { price: "" } })
 
 // Using the MongoDB $unset operator to set array elements to null
-//db.products.updateMany({}, { $unset: { "storage.0": "" } })
+db.products.updateMany({}, { $unset: { "storage.0": "" } })
 
 
 
@@ -46,7 +46,7 @@ use('learning_data')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-//db.products.updateMany({}, { $rename: { name: "name_product" } })
+db.products.updateMany({}, { $rename: { name: "name_product" } }) // name --> name_product
 
 // Using the MongoDB $rename to move field out of the embedded document
-//db.products.updateMany({}, { $rename: { "spec.cpu": "cpu" } })
+db.products.updateMany({}, { $rename: { "spec.cpu": "cpu" } }) // --> spec: { cpu, others... } -> spec: { others... } cpu

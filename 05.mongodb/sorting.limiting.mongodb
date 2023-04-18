@@ -18,7 +18,7 @@ use('learning_data')
 //db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: -1, name: 1 })
 
 // Sorting documetns by dates
-//db.products.find({ releaseDate: { $exists: 1 } }, { name: 1, releaseDate: 1 }).sort({ releaseDate: -1 })
+db.products.find({ releaseDate: { $exists: 1 } }, { name: 1, releaseDate: 1 }).sort({ releaseDate: -1 })
 
 
 

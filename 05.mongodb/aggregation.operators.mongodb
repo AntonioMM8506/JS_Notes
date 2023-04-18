@@ -67,11 +67,11 @@ use('learning_data')
 ])*/
 
 // Using the MongoDB $sum with an expression
-/*db.coffees.aggregate([
+db.coffees.aggregate([
   {
     $group: {
       _id: null,
       totalAmount: { $sum: { $multiply: ['$price', '$quantity'] } }
     }
   }
-])*/
+])

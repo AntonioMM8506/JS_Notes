@@ -19,7 +19,7 @@ const logger = (message) => {
 // Let's clear db connection after each test, we will yse afteEach
 afterEach(() => {
   logger('Cleaning database connection...')
-})
+})*/
 
 // Let's run some test
 test('1 + 2 = 3', () => {
@@ -28,7 +28,7 @@ test('1 + 2 = 3', () => {
 
 test('10 x 5 grater than 30', () => {
   expect(10 * 5).toBeGreaterThan(30)
-})*/
+})
 
 
 
@@ -48,7 +48,7 @@ test('10 x 5 grater than 30', () => {
 // Let's run some code after all the test are done
 afterAll(() => {
   logger('Now we are cleaning db connection')
-})*/
+})
 
 // Let's run some test
 test('1 + 10 = 11', () => {
@@ -57,7 +57,7 @@ test('1 + 10 = 11', () => {
 
 test('10 x 5 grater than 100', () => {
   expect(10 * 50).toBeGreaterThan(100)
-})
+})*/
 
 
 
@@ -71,7 +71,7 @@ test('10 x 5 grater than 100', () => {
 */
 describe('test regarding scoping tests', () => {
   // Let's log some info before running our tests
-  beforeAll(() => {
+  beforeEach(() => {
     logger('Running test in describe block!')
   })
 

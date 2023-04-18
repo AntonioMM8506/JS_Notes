@@ -30,7 +30,7 @@ use('learning_data')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-//db.products.updateMany({ price: 899 }, { $set: { price: 895 }})
+db.products.updateMany({ price: 899 }, { $set: { price: 895 }})
 
 // Using the MongoDB updateMany() method to update array elements
-//db.products.updateMany({ price: 895 }, { $set: { 'storage.0': 32, 'storage.1': 128 } })
+db.products.updateMany({ price: 895 }, { $set: { 'storage.0': 32, 'storage.1': 128 } })

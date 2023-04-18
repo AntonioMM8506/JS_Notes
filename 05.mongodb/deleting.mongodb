@@ -7,10 +7,10 @@ use('learning_data')
     The deleteOne() method allows you to delete a single document from a collection
   ------------------------------------------------------------------------------------------------------------------
 */
-//db.products.deleteOne({ _id: 1 })
+db.products.deleteOne({ _id: 1 })
 
 // Using the deleteOne() method to delete the first document from a collection
-//db.products.deleteOne({})
+db.products.deleteOne({})
 
 
 
@@ -20,7 +20,7 @@ use('learning_data')
     The deleteMany() method allows you to remove all documents that match a condition from a collection.
   ------------------------------------------------------------------------------------------------------------------
 */
-//db.products.deleteMany({ price: 895 })
+db.products.deleteMany({ price: 895 })
 
 // Using the deleteMany() method to delete all documents
 db.products.deleteMany({})

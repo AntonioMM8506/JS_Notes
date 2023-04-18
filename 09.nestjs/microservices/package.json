@@ -26,6 +26,7 @@
     "@nestjs/microservices": "^9.3.12",
     "@nestjs/mongoose": "^9.2.2",
     "@nestjs/platform-express": "^9.0.0",
+    "amqplib": "^0.10.3",
     "joi": "^17.9.1",
     "mongoose": "^7.0.3",
     "reflect-metadata": "^0.1.13",

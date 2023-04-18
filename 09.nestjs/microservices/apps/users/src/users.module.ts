@@ -8,10 +8,11 @@ import { MongooseModule } from '@nestjs/mongoose'
 import { UsersRepository } from './users.repository'
 import { User, UserSchema } from './schemas/user.schema'
 
-import { DatabaseModule } from '@app/common'
+import { DatabaseModule, RmqModule } from '@app/common'
 
 import { UsersController } from './users.controller'
 import { UsersService } from './users.service'
+import { ORDER_SERVICE } from './constants/services'
 
 @Module({
   imports: [
@@ -25,6 +26,9 @@ import { UsersService } from './users.service'
     }),
     MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
     DatabaseModule,
+    RmqModule.register({
+      name: ORDER_SERVICE,
+    }),
   ],
   controllers: [UsersController],
   providers: [UsersService, UsersRepository],
