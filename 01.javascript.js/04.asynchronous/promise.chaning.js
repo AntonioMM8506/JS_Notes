@@ -112,7 +112,9 @@ const getServiceCost = (services) => {
 }
 
 // Now we can use the promises to serialize the sequence:
+console.log('Start')
 getUser(100)
   .then(getServices)
   .then(getServiceCost)
   .then(console.log)
+console.log('Finish')

@@ -21,3 +21,8 @@ const book = {
     console.log('Testy!')
   }
 }
+
+// Using the keyword new
+const myObject = new Object()
+const myArray = new Array()
+const myDate = new Date()

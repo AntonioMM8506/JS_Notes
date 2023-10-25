@@ -57,4 +57,4 @@ serialNumber.next = 10
 for (let i = 1; i <= 10; i++) {
   console.log(`Round number ${i}, now the value of serialNumber.next is: ${serialNumber.next}`)
 }
-//serialNumber.next = 5
+serialNumber.next = 5

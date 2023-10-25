@@ -33,7 +33,7 @@ const correctFile = 'dummy.json'
 const incorrectFile = 'incorrect.json'
 
 // Lets read a file and using callbacks, we will process the data
-fs.readFile(incorrectFile, 'utf-8', (err, data) => {
+fs.readFile(correctFile, 'utf-8', (err, data) => {
   if (err) {
     // If there was an error, we display the error
     console.warn('Something went wrong!', err)

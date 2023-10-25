@@ -35,17 +35,17 @@ const promiseGetUsers = () => {
   })
 }
 // Just for fun lest create a functoin that prints out the given user info
-const onFulfilled = (users) => {
+/*const onFulfilled = (users) => {
   console.log('Inside promise')
   console.log(users)
 }
 // Now, let's run the promise function
 const promise = promiseGetUsers()
-//console.log('Waiting for the promise to be fulfilled!')
+console.log('Waiting for the promise to be fulfilled!')
 // Using then method to print the users
 promise.then(onFulfilled)
 // Another way to handle the promise result
-/*promise.then((users) => {
+promise.then((users) => {
   console.log(users[0])
 })*/
 
@@ -86,8 +86,8 @@ const resultStudents = getStudents()
   })*/
 
 // If we remember we can hanlde error also in then method of the promise, like this:
-resultStudents
-  .then((success) => console.log(success), (error) => console.log(error))
+/*resultStudents
+  .then((success) => console.log(success), (error) => console.log(error))*/
 
 
 /*

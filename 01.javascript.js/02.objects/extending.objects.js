@@ -13,9 +13,9 @@ target = {
   ...source
 }
 
-console.log('Extending target with source: ')
+/*console.log('Extending target with source: ')
 console.log(target)
-console.log('=================================')
+console.log('=================================')*/
 
 // New and cool way to extend a few objects into another
 let receiver = { a: 1 }

@@ -36,7 +36,7 @@ copy[0] = 0
 //console.log(`First element of copy array ${copy[0]}`)
 
 // Using spread operator with an iterable object, in this case lets convert a string into array
-let letters = [...'Workable']
+let letters = [...'Workable'] // ['W', 'o' ...]
 // Here is a easy way to remove duplicate elements from an array
 // We need to convert the array to a set and the inmediately convert the set back to an array
 let message = 'Hello world!'
@@ -53,7 +53,7 @@ let messageArray = [...new Set(message)]
 let noArgs = new Array() // []
 
 // Call it with a single numeric argument
-let oneSingleNumericArg = new Array(10)
+let oneSingleNumericArg = new Array(10) // [10]
 
 // Explicitly specify the elements
 let arrayWithArgs = new Array(10, 20, 'Jhon Doe', false)

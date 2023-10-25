@@ -1,4 +1,4 @@
-// Combining push() and pop() to implement fifo stack
+// Combining push() and pop() to implement filo stack
 /*let stack = []
 stack.push(1,2) // [1,2]
 console.log(stack)
@@ -15,7 +15,7 @@ console.log(stack)
 stack.pop()
 console.log(stack)*/
 
-// Create a queue using push() and shift()
+// Create a queue using push() and shift() fifo
 let q = []
 q.push(1,2)
 console.log(q)

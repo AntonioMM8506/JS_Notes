@@ -15,9 +15,9 @@ const p2 = new Promise((resolve, reject) => {
     console.log('Promise 2 fulfilled')
     resolve(2)
   }, 2000)
-})
+})*/
 // Let's use Promise.any to execute both promises
-const p = Promise.any([p1,p2])
+/*const p = Promise.any([p1,p2])
 // Now we need to print the result
 p.then((value) => {
   console.log('Returned promise')
@@ -36,13 +36,13 @@ p.then((value) => {
 */
 /*const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    console.log('Promise 1 rejected')
+    console.log('Promise 3 rejected')
     reject('error')
   }, 1000)
 })
 const p4 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    console.log('Promise 2 fulfilled')
+    console.log('Promise 4 fulfilled')
     resolve(2)
   }, 2000)
 })

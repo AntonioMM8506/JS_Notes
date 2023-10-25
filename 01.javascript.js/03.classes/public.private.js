@@ -33,12 +33,12 @@ class PrivateRectangle {
 
 
 const customRectangle = new Rectangle(10, 5)
-console.log(`The height of the rectangle is: ${customRectangle.height}`)
+/*console.log(`The height of the rectangle is: ${customRectangle.height}`)
 console.log(`The perimeter of the rectangle is ${customRectangle.perimeter()}`)
-console.log('=================================')
+console.log('=================================')*/
 
 const customPrivateRectangle = new PrivateRectangle()
-/*console.log(`The private width of the rectangle is ${customPrivateRectangle.getPrivateWidth()}`)
-console.log(`The private perimeter is ${customPrivateRectangle.getPrivatePerimeter()}`)*/
+console.log(`The private width of the rectangle is ${customPrivateRectangle.getPrivateWidth()}`)
+console.log(`The private perimeter is ${customPrivateRectangle.getPrivatePerimeter()}`)
 console.log(`Value of width: ${customPrivateRectangle.width}`)
 

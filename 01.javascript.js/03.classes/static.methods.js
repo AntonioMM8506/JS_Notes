@@ -30,18 +30,24 @@ let thirdClassInstance = new Square(10)
 //console.log(`Bigger perimeter?: ${ thirdClassInstance.comparePerimeter(firstClassInstance, secondClassInstance) }`)
 
 // Correct way
-// console.log(`Bigger perimeter?: ${Square.comparePerimeter(firstClassInstance, secondClassInstance)}`)
-//console.log('=================================')
+/*console.log(`Bigger perimeter?: ${Square.comparePerimeter(firstClassInstance, secondClassInstance)}`)
+console.log('=================================')*/
 
 /*
   Example of how "this" keyword works in a static context
 */
-class Chat {
+/*class Chat {
   static checkThis() {
     return this === Chat
   }
+}*/
+class Chat {
+  checkThis() {
+    return this === Chat
+  }
 }
-//console.log(`Value of: ${Chat.checkThis()}`)
+const myOtherChatClass = new Chat()
+console.log(`Value of: ${myOtherChatClass.checkThis()}`)
 
 /* 
   Access static members from another static method 

@@ -16,4 +16,4 @@ let o3 = Object.create(Object.prototype)
 let o4 = {
   x: "don't change this values"
 }
-library.function(Object.create(o4))
+//library.function(Object.create(o4))

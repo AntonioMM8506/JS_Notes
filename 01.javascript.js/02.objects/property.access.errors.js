@@ -10,7 +10,7 @@ const book = {
 }
 
 // book.subTitle does not exist
-console.log(`The value of book.subTitle is: ${book.subTitle}`)
+//console.log(`The value of book.subTitle is: ${book.subTitle}`)
 
 // TypeError: undefined does not have length
 //const len = book.subTitle.length
@@ -34,4 +34,4 @@ tempo1 = book?.author?.subTitle // Conditional property access or Optional chain
 console.log(tempo1)
 
 // Set a property on undefined
-book.temporal.var = 2
+//book.temporal.var = 2
