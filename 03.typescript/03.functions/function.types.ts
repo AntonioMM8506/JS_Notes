@@ -1,6 +1,10 @@
 // Basic function type declaration
 let sum: (x: number, y: number) => number
 
+sum = (x: number, y: number) => {
+  return x + y
+}
+
 sum = function (x: number, y: number) {
   return x + y
 }

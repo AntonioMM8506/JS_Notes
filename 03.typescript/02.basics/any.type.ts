@@ -3,6 +3,8 @@ let anything: any
 anything = 'Could be a string'
 anything = true
 anything = null
+anything = {}
+anything = () => {}
 
 // any vs object
 let result: any

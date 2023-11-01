@@ -1,6 +1,5 @@
-// Basic enum definition
 // Lets compile this code
-/*enum Month {
+enum Month {
   Jan, // Index: 0
   Feb,
   Mar,
@@ -13,10 +12,20 @@
   Oct,
   Nov,
   Dec
-}*/
+}
+
+//let myMonth: Month = Month.Jun
+
+enum StringMonth {
+  Jan = 'Jan',
+  Feb = 'Feb'
+}
+
+/*let myMonth: StringMonth = StringMonth['Jan']
+console.log(myMonth)*/
 
 // Lets change the initial index of the enum
-enum Month {
+/*enum Month {
   Jan = 1,
   Feb,
   Mar,
@@ -29,4 +38,4 @@ enum Month {
   Oct,
   Nov,
   Dec
-}
+}*/

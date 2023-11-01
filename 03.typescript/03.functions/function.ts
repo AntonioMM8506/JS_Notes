@@ -12,8 +12,8 @@ function studentsFunc(): string[] {
 }
 
 function promiseFunc(): Promise<string> {
-  return new Promise((resolver) => {
-    return 'Hi, there!'
+  return new Promise((resolve) => {
+    resolve('Hi, there!')
   })
 }
 

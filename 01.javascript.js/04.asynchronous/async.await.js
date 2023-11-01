@@ -1,13 +1,19 @@
 // Let's create a basic example of async/await syntax
-function sayHi() {
-  return Promise.resolve('Hi, there!')
-}
-// Creating a new function to print a message
-/*const display = async () => {
-  let result = await sayHi()
-  console.log(result)
-}
-display()*/
+/*(async () => {
+  async function sayHi() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve('Hi there'), 1000)
+    })
+  }
+  // Creating a new function to print a message
+  console.log('Start code')
+  const display = async () => {
+    let result = await sayHi()
+    console.log(result)
+  }
+  await display()
+  console.log('End code')
+})()*/
 // The following code won't work
 /*const errorDisplay = () => {
   let result = await sayHi()

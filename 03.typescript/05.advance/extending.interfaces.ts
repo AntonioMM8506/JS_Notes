@@ -23,8 +23,8 @@ class FirstMail implements FutureMailable {
     return true
   }
 }
-const myMailClass = new FirstMail()
-/*myMailClass.later('test@example.com', 1000)
+/*const myMailClass = new FirstMail()
+myMailClass.later('test@example.com', 1000)
 myMailClass.send('test@example.com')
 myMailClass.queue('test@example.com')*/
 

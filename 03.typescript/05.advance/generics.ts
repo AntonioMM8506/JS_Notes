@@ -15,7 +15,18 @@ let booleans: boolean[] = [true, false]
 //console.log(`The random element from booleans is: ${ getRandomElement(booleans) }`)
 
 // You can have a generic with multiple types
-function merge<U, V>(obj1: U, obj2: V) {
+type customObjU = {
+  name: string,
+  age: number,
+}
+type customObjV = {
+  gender: string,
+  children: boolean,
+}
+
+type returnType = customObjU & customObjV
+
+function merge<U extends customObjU, V extends customObjV>(obj1: U, obj2: V): returnType {
   return {
     ...obj1,
     ...obj2
@@ -30,3 +41,24 @@ const myObj2 = {
   children: false
 }
 console.log(merge(myObj1, myObj2))
+
+// Conditional type
+interface StringId {
+  id: string
+}
+interface NumberId {
+  id: number
+}
+
+type Id<T> = T extends string ? StringId : NumberId
+
+let idOne: Id<string>
+let idTwo: Id<number>
+
+idOne = {
+  id: 'audokeujakud15'
+}
+
+idTwo = {
+  id: 15
+}

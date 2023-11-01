@@ -8,4 +8,4 @@ let secondVar: number
 let thirdVar = 45 // number
 
 // [identifier]
-let forthVar: boolean = true
+let forthVar

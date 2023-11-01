@@ -14,6 +14,7 @@ import { throttlerConfig, databaseConfig } from '@config/index'
 import { UsersModule } from './features/users/users.module'
 import { AuthModule } from './features/auth/auth.module'
 import { ProductsModule } from './features/products/products.module'
+import { CatalogModule } from './features/catalog/catalog.module'
 
 @Module({
   imports: [
@@ -43,6 +44,7 @@ import { ProductsModule } from './features/products/products.module'
     UsersModule,
     AuthModule,
     ProductsModule,
+    CatalogModule,
   ],
   controllers: [AppController],
   providers: [AppService],
