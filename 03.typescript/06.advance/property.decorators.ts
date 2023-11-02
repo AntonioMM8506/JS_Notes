@@ -3,8 +3,11 @@ const printMemberName = (target: any, memberName: string) => {
 }
 
 class PersonB {
-  //@printMemberName
+  @printMemberName
   name: string = 'Jhon'
+
+  @printMemberName
+  age: number = 88
 }
 
 /*
@@ -34,7 +37,7 @@ class PersonC {
 }
 
 const person = new PersonC()
-//console.log(person.name)
+console.log(person.name)
 
 person.name = 'Juan'
 console.log(person.name)
