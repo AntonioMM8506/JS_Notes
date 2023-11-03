@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@nestjs/config": "^2.3.1",
-    "@nestjs/mapped-types": "*",
-    "@nestjs/microservices": "^9.3.12",
-    "typescript": "^5.2.2"
-  }
-}
