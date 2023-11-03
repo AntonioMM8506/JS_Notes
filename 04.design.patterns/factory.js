@@ -1,27 +1,28 @@
 // Basic Factory pattern implementation
+class Hardware {
+  ram
+  hdd
+  name
 
-import Motorvehicle from './motorvehicle'
-import Aircraft from './aircraft'
-import Railvehicle from './railvehicle'
-
-const VehicleFactory = (type, make, model, year) => {
-  switch(type) {
-    case 'car':
-      return new Motorvehicle('car', make, model, year)
-      break
-    case 'airplane':
-      return new Aircraft('airplane', make, model, year)
-      break
-    case 'helicopter':
-      return new Aircraft('helicopter', make, model, year)
-      break
-    default:
-      return new Railvehicle('train', make, model, year)
-      break
+  printRam() {
+    console.log(`Hardware ram: ${ram}`)
   }
 }
 
-module.exports = VehicleFactory
+class Laptop extends Hardware {
+  constructor(ram, hdd, name) {
+    super()
 
-// Correct way to use VehicleFactory
-const audiAllRoad = VehicleFactory('car', 'Audi', 'A6 Allroad', '2020')
+    this.ram = ram
+    this.hdd = hdd
+    this.name = name
+  }
+}
+
+class PC extends Hardware {
+  constructor(ram, name) {
+    super()
+    this.ram = ram
+    this.name = name
+  }
+}
