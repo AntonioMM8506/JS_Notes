@@ -19,10 +19,21 @@
 
 */
 type I<T> = T extends number ? number : null
-class ParentClass {
+abstract class ParentClass {
   counter: I<boolean>
   interval: I<null>
   waitingTime: I<string>
 }
 
-class CompetitiveStuff {}
+class CompetitiveStuff extends ParentClass {
+  constructor() {
+    super()
+  }
+
+  static multy(): Promise<number[]> {
+    let myInterval = setInterval(() => {},)
+    clearInterval(myInterval)
+  }
+
+  static wating() {}
+}

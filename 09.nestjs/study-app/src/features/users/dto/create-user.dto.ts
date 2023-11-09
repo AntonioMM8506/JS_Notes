@@ -1,20 +1,26 @@
 // Import core libraries
-import { IsNotEmpty, MinLength, Matches, IsEmail } from 'class-validator'
+import {
+  IsNotEmpty,
+  IsOptional,
+  MinLength,
+  Matches,
+  IsEmail,
+} from 'class-validator'
 import { ApiProperty } from '@nestjs/swagger'
 
 export class CreateUserDto {
   @IsNotEmpty()
-  @MinLength(3)
+  @MinLength(3, { message: '' })
   @ApiProperty()
   name: string
 
-  @IsNotEmpty()
+  @IsOptional()
   @MinLength(3)
-  lastName: string
+  lastName?: string
 
   @IsNotEmpty()
   @IsEmail()
-  email: string
+  email: string //edgar@example.com
 
   @ApiProperty({
     description:
