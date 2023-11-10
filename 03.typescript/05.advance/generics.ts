@@ -3,7 +3,7 @@
   - The T allows you to capture the type that is provided at the time of calling the function.
   - The function uses the T type variable as its return type
 */
-function getRandomElement<T>(items: T[]): T {
+function getRandomElement<A>(items: A[]): A {
   let randomIndex = Math.floor(Math.random() * items.length)
   return items[randomIndex]
 }
@@ -11,11 +11,22 @@ function getRandomElement<T>(items: T[]): T {
 // Lets call a generic function
 let numbers: number[] = [1, 5, 6, 2, 10]
 let booleans: boolean[] = [true, false]
-//console.log(`The random element from numbers is: ${ getRandomElement(numbers) }`)
-//console.log(`The random element from booleans is: ${ getRandomElement(booleans) }`)
+/*console.log(`The random element from numbers is: ${ getRandomElement(numbers) }`)
+console.log(`The random element from booleans is: ${ getRandomElement(booleans) }`)*/
 
 // You can have a generic with multiple types
-function merge<U, V>(obj1: U, obj2: V) {
+type customObjU = {
+  name: string,
+  age: number,
+}
+type customObjV = {
+  gender: string,
+  children: boolean,
+}
+
+type returnType = customObjU & customObjV
+
+function merge<U extends customObjU, V extends customObjV>(obj1: U, obj2: V): returnType {
   return {
     ...obj1,
     ...obj2
@@ -30,3 +41,24 @@ const myObj2 = {
   children: false
 }
 console.log(merge(myObj1, myObj2))
+
+// Conditional type
+interface StringId {
+  id: string
+}
+interface NumberId {
+  id: number
+}
+
+type Id<T> = T extends string ? StringId : NumberId
+
+let idOne: Id<string>
+let idTwo: Id<number>
+
+idOne = {
+  id: 'audokeujakud15'
+}
+
+idTwo = {
+  id: 15
+}

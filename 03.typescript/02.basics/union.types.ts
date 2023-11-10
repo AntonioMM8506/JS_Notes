@@ -5,4 +5,4 @@ customValue = 100
 // Specifict values for union types
 let carBrand: 'Toyota' | 'Nissan' | 'Kia'
 carBrand = 'Nissan'
-// carBrand = 'BMW'
+//carBrand = 'BMW'

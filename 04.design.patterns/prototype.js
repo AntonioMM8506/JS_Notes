@@ -8,7 +8,7 @@ const atv = {
   }
 }
 
-const secondATV = Object.create(atv)
+const secondATV = Object.create(atv) // Copy
 
 // Another way of using the Prototype Design pattern is by specifying the prototype in the "class"
 const atvPrototype = {

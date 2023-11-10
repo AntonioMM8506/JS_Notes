@@ -7,4 +7,4 @@ let format: StringFormat
 format = (text: string, isUpper: boolean) => {
   return isUpper ? text.toLocaleUpperCase() : text.toLocaleLowerCase()
 }
-console.log(format('this is a small text', false))
+console.log(format('this is a small text', true))

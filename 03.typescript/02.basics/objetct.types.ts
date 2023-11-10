@@ -1,5 +1,5 @@
 // Basic object definition
-let employee: object
+let employee: object // Object
 
 employee = {
   firstName: 'John',
@@ -12,7 +12,7 @@ employee = {
 //employee = 'Jane'
 
 // If you try to access a property that does not exists, you will get an error
-// console.log(employee.hireDate)
+//console.log(employee.hireDate)
 
 // Explicitly specify properties of an oject, declare the object first
 let teacher: {

@@ -40,9 +40,9 @@ class CarBuilder {
 module.exports = CarBuilder
 
 // The correct way to use builder pattern
-const bmw = new CarBuilder('bmw', 'x6', 2020).addInStock().build()
+//const bmw = new CarBuilder('bmw', 'x6', 2020).addInStock().build()
 const audi = new CarBuilder('audi', 'a8', 2021).notForSale().build()
 const mercedes = new CarBuilder('mercedes-benz', 'c-class', 2019).build()
 
 // Here we can have an error, that's why we use builder pattern
-//const bmw = new CarBuilder('bmw', 'x6', 2020, true, true)
+const bmw = new CarBuilder('bmw', 'x6', 2020, true, true)

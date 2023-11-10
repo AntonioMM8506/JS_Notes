@@ -15,13 +15,13 @@ const p2 = new Promise((resolve, reject) => {
     console.log('Promise 2 fulfilled')
     resolve(2)
   }, 2000)
-})*/
+})
 // Let's use Promise.any to execute both promises
-/*const p = Promise.any([p1,p2])
+const p = Promise.any([p1,p2])
 // Now we need to print the result
 p.then((value) => {
   console.log('Returned promise')
-  console.log(value)
+  console.log(`Promise resolved: ${value}`)
 })*/
 // First, create a new promise p1 that will resolve to a value 1 after one second.
 // Second, create a new promise p2 that will resolve to a value 2 after two seconds.
@@ -50,7 +50,7 @@ const p4 = new Promise((resolve, reject) => {
 const prom = Promise.any([p3, p4])
 prom.then((value) => {
   console.log('Returned Promise')
-  console.log(value)
+  console.log(`Resolved promise: ${value}`)
 })*/
 
 
@@ -78,7 +78,11 @@ const p7 = new Promise((resolve, reject) => {
   }, 3000)
 })
 const otherP = Promise.any([p5,p6,p7])
-otherP.catch((e) => {
+/*otherP.then().catch((e) => {
+  console.log('Returned promise')
+  console.log(e, e.errors)
+})*/
+otherP.then(() => {}, (e) => {
   console.log('Returned promise')
   console.log(e, e.errors)
 })

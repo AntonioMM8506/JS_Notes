@@ -29,6 +29,7 @@ class BabyGirl {
 
   public set fullName(name: string) {
     let parts: Array<string> = name.split(' ')
+    // !== !=
     if (parts.length != 2) throw new Error('Invalid name format!')
 
     this._firstName = parts[0]

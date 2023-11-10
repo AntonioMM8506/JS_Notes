@@ -8,7 +8,7 @@ interface Country {
 const americanCountry = (country: Country) : string => {
   return `The population of ${ country.name } is ${country.population}`
 }
-//console.log(americanCountry({name: 'Mexico', population: 120000000}))
+console.log(americanCountry({name: 'Mexico', population: 120000000}))
 // Lets declare an object, because we have a name and population with the correct type, ts does not care about extra properties
 let mexico = {
   name: 'Mexico',
@@ -29,7 +29,7 @@ interface EuropeanCountry {
 const germany: EuropeanCountry = {
   name: 'Germany',
   population: 80000000,
-  continent: 'Euriope'
+  continent: 'Europe'
 }
 // Let's try to reassign value in our germany object
 germany.population = 90000000

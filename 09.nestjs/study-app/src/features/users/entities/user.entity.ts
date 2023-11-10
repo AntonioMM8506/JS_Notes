@@ -6,10 +6,10 @@ export type UserDocument = HydratedDocument<User>
 
 @Schema()
 export class User {
-  @Prop({
+  /*@Prop({
     required: true,
   })
-  name: string
+  name: string*/
 
   @Prop({
     required: true,
@@ -29,7 +29,7 @@ export class User {
   @Prop()
   refreshToken?: string
 
-  /*@Prop({
+  @Prop({
     default: false,
   })
   validatedAccount: boolean
@@ -38,7 +38,7 @@ export class User {
     enum: ['admin', 'finalUser'],
     default: 'admin',
   })
-  accountType: string*/
+  accountType: string
 }
 
 export const UserSchema = SchemaFactory.createForClass(User)

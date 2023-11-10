@@ -8,6 +8,7 @@ class Milk implements Json {
   constructor(private brand: string,
       private price: number) {
   }
+  
   toJson(): string {
     return JSON.stringify(this);
   }

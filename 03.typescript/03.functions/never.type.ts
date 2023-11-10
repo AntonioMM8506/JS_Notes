@@ -1,6 +1,7 @@
 // Basic use of never
 const raiseError = (message: string): never => {
   throw new Error(message)
+  console.log('Hello, world!')
 }
 
 /*try {
@@ -16,14 +17,16 @@ function reject() {
 
 function neverOccur(): never {
   while(true) {}
+  console.log('Hello, world!')
 }
 
 // Infinite loop also is a never type
-let loop = function forever(): never {
+/*let loop = function forever(): never {
   while(true) {
     console.log('Hello')
   }
-}
+  console.log('End')
+}*/
 
 // We can use never type when a function not always return a value
 // Thise function will throw an error because is type boolean

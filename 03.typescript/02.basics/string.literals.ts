@@ -14,5 +14,5 @@ enum events {
   mouseUp,
   mouseDown
 }
-mouseEvent = 'dbClick'
+mouseEvent = 'mouseDown'
 let customMouseEvent: events = events.dbClick
