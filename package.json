@@ -4,8 +4,12 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/microservices": "^9.3.12",
     "argon2": "^0.31.1",
+    "dotenv": "^16.3.1",
     "joi": "^17.11.0",
+    "mongoose": "^7.6.3",
     "passport": "^0.6.0",
-    "passport-jwt": "^4.0.1"
+    "passport-jwt": "^4.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
