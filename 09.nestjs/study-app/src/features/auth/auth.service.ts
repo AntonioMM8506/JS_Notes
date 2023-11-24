@@ -1,7 +1,7 @@
 import {
   Injectable,
-  BadRequestException,
-  ForbiddenException,
+  BadRequestException, // 4xx
+  ForbiddenException, // 4xx
 } from '@nestjs/common'
 import * as argon2 from 'argon2'
 import { JwtService } from '@nestjs/jwt'

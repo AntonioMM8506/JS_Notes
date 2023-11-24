@@ -9,7 +9,7 @@ db.studentAddresses.drop()
     Reference model relationship
   ------------------------------------------------------------------------------------------------------------------
 */
-/*const newStudent = {
+const newStudent = {
   name: 'Ishan',
   studentId: 'k_hut_2022',
   branch: 'CSE'
@@ -21,7 +21,7 @@ const newStudentAddress = {
 }
 
 // Insert data
-db.students.insertOne(newStudent)
+/*db.students.insertOne(newStudent)
 db.studenAddresses.insertOne(newStudentAddress)*/
 
 /* 

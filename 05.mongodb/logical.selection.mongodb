@@ -40,7 +40,7 @@ use('sample_airbnb')
 // Using MongoDB $or operator to select documents where the value of a field is in a range
 /*db.listingsAndReviews.find({ $or: [
   { beds: { $lt: 3 } },
-  { beds: { $gt: 6 } }
+  { beds: { $gt: 5 } }
 ] }).count()*/
 
 
@@ -57,7 +57,7 @@ use('sample_airbnb')
 //db.listingsAndReviews.find({ bedrooms: { $not: { $gte: 3 } } }).count()
 
 // Using MongoDB $not operator to select documents based on expressions
-//db.listingsAndReviews.find({ "address.country": { $not: /^Brazil+/ } }).count()
+db.listingsAndReviews.find({ "address.country": { $not: /^Brazil+/ } }).count()
 
 
 

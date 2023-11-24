@@ -1,7 +1,7 @@
 // Select the database to use.
-//use('learning_data')
+use('learning_data')
 
-//const productProjection = { name: 1, price: 1, _id: 0 }
+const productProjection = { name: 1, price: 1, _id: 0 }
 
 /* 
   ------------------------------------------------------------------------------------------------------------------
@@ -12,6 +12,7 @@
 */
 
 // Let's use the eq operator to check if a field equals to a specified value
+//db.products.find({ price: 899 })
 //db.products.find({ price: { $eq: 899 } }, productProjection) // Same as: db.products.find({ price: 899 }, productProjection)
 
 // Using the $eq operator to check if a field in an embedded document equals a value
@@ -93,7 +94,7 @@ use('sample_airbnb')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-//db.listingsAndReviews.find({ 'bedrooms' : { $ne: 2 } }).count()
+//db.listingsAndReviews.find({ 'bedrooms' : { $ne: 2 } }).count() // !==
 
 
 
@@ -119,4 +120,4 @@ use('sample_airbnb')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-//db.listingsAndReviews.find({ 'bedrooms' : { $in: [2, 4, 7] } }).count()
+db.listingsAndReviews.find({ 'bedrooms' : { $in: [2, 4, 7] } }).count()

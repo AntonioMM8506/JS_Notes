@@ -11,11 +11,22 @@ use('learning_data')
     documents by the field in ascending order
   ------------------------------------------------------------------------------------------------------------------
 */
-//db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: 1 }) // ASC
-//db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: -1 }) // DESC
+db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: 1 }) // ASC
+db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: -1 }) // DESC
 
 // Sorting document by two or more
-//db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: -1, name: 1 })
+db.products.find({ price: { $exists: 1 } }, { name: 1, price: 1 }).sort({ price: -1, name: 1 })
+/*
+  p1 = 250
+  a2 = 500
+  c2 = 500
+  p2 = 350
+  ---------------
+  a2
+  c2
+  p2
+  p1
+*/
 
 // Sorting documetns by dates
 db.products.find({ releaseDate: { $exists: 1 } }, { name: 1, releaseDate: 1 }).sort({ releaseDate: -1 })
@@ -31,6 +42,6 @@ db.products.find({ releaseDate: { $exists: 1 } }, { name: 1, releaseDate: 1 }).s
 //db.products.find({}, { name: 1, price: 1 }).sort({ price: -1 })
 
 // Using MongoDB limit() and skip() to get the paginated result
-db.products.find({}, { name: 1, price: 1 }).sort({ price: -1 }).limit(2).skip()
+db.products.find({}, { name: 1, price: 1 }).sort({ price: -1 }).skip(2).limit(2)
 
 

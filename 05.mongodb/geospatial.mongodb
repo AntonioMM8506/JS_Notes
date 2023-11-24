@@ -34,7 +34,7 @@ const extraPoints = [
 //db.restaurants.find({ location: { $near: { $maxDistance: 10000, $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
 
 // Lets use minDistance to start looking from an specific distance
-//db.restaurants.find({ location: { $near: { $minDistance: 30000, $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
+//db.restaurants.find({ location: { $near: { $minDistance: 30000, $maxDistance: 100000, $geometry: { type: 'Point', coordinates: [ -100.3, 25.6 ] } } } })
 
 // Let's work with a polygon
 //db.cities.drop()
@@ -44,7 +44,7 @@ const polygon = {
   location: {
     type: 'Polygon',
     coordinates: [[
-      [-100.218039, 25.673810],
+      [-100.218039, 25.673810], // lng - lat
       [-100.162660, 25.778144],
       [-100.305802, 25.788109],
       [-100.401390, 25.752244],
@@ -57,5 +57,5 @@ const polygon = {
 }
 //db.cities.insertOne(polygon)
 
-db.cities.find({ location: { $geoIntersects: { $geometry: { type: 'Point', coordinates: [-100.300221, 25.742646] } } }}, { city: 1 })
+db.cities.find({ location: { $geoIntersects: { $geometry: { type: 'Point', coordinates: [-100.300221, 25.742646] } } }})
 //db.cities.find({ location: { $geoIntersects: { $geometry: { type: 'Point', coordinates: [-100.131328, 25.400891] } } }})
