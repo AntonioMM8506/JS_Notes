@@ -31,7 +31,7 @@ use('learning_data')
 
 db.coffees.aggregate([
   {
-    $match: { item: 'Americanos' }
+    $match: { "name_product": 'Americanos' }
   },
   {
     $group: {
@@ -49,7 +49,7 @@ db.coffees.aggregate([
     name as _id,
     sum(quantity) as totalQty
   from
-    sales
+    coffees
   where name = 'Americanos'
   group by name
   order by totalQty desc;

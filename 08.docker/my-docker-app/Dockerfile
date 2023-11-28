@@ -1,20 +1,29 @@
 # pull official base image
-FROM node
+#FROM node
 
 # set working directory
-WORKDIR /app
+#WORKDIR /app
 
 # add /app/node_modules/.bin to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+#ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts -g --silent
+#COPY package.json ./
+#COPY package-lock.json ./
+#RUN npm install
+#RUN npm install react-scripts -g --silent
 
 # add app
-COPY . ./
+#COPY . ./
 
 # start app
+#CMD ["npm", "start"]
+
+FROM node:alpine
+
+WORKDIR /user/src/app
+
+COPY . .
+RUN npm install --production
+RUN npm run build
 CMD ["npm", "start"]

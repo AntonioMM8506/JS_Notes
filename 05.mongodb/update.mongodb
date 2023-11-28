@@ -11,13 +11,13 @@ use('learning_data')
 */
 
 // Update product price, using id as filter
-//db.products.updateOne({ _id: 1 }, { $set: { price: 899 }})
+//db.coffees.updateOne({ _id: 1 }, { $set: { price: 6 }})
 
 // Using the MongoDB updateOne() method to update the first matching document
-//db.products.updateOne({ price: 899 }, { $set: { price: null }})
+//db.coffees.updateOne({ price: 6 }, { $set: { price: null }})
 
 // Using the MongoDB updateOne() method to update array elements
-//db.products.updateOne({ _id: 4 }, { $set: { 'storage.0': 16, 'storage.1': 32 } })
+//db.coffees.updateOne({ _id: 4 }, { $set: { 'type.0': 'hot coffee', 'type.1': "cold coffee" } })
 
 
 
@@ -30,7 +30,7 @@ use('learning_data')
   ------------------------------------------------------------------------------------------------------------------
 */
 
-db.products.updateMany({ price: 899 }, { $set: { price: 895 }})
+db.coffees.updateMany({ price: 10 }, { $set: { price: 11 }})
 
 // Using the MongoDB updateMany() method to update array elements
-db.products.updateMany({ price: 895 }, { $set: { 'storage.0': 32, 'storage.1': 128 } })
+db.coffees.updateMany({ price: 25 }, { $set: { 'type.0': "hot", 'type.1': "cold" } })

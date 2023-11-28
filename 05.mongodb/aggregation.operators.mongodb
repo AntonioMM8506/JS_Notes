@@ -14,7 +14,7 @@ use('learning_data')
 /*db.coffees.aggregate([
   {
     $group: {
-      _id: '$item',
+      _id: '$name_product',
       averageQty: { $avg: '$quantity' }
     }
   }
@@ -24,7 +24,7 @@ use('learning_data')
 /*db.coffees.aggregate([
   {
     $group: {
-      _id: '$item',
+      _id: '$name_product',
       averageAmount: {
         $avg: { $multiply: ['$quantity', '$price'] }
       }
@@ -36,7 +36,7 @@ use('learning_data')
 /*db.coffees.aggregate([
   {
     $group: {
-      _id: '$item',
+      _id: '$name_product',
       averageAmount: {
         $avg: { $multiply: ['$quantity', '$price'] }
       }

@@ -5,7 +5,7 @@
 */
 
 // Select the database to use.
-//use('sample_airbnb');
+use('sample_airbnb');
 
 // Let's select one document using the id, we will get the full document
 // Let's do an empty query
@@ -19,7 +19,7 @@
 
 // Now, lets get one document, with some data, not all of the data
 /*let projection = { name: 1, property_type: 1, amenities: 1 }
-db.listingsAndReviews.findOne({ _id: '10030955' }, projection)*/
+db.listingsAndReviews.findOne({ _id: '10030955' }, { name: 1, property_type: 1, amenities: 1 })*/
 
 // Let's remove the _id, because sometimes we don't need to return that prop
 /*let projection = { name: 1, property_type: 1, amenities: 1, _id: 0 }
@@ -32,7 +32,7 @@ db.listingsAndReviews.findOne({ _id: '10006546' }, projection)*/
 */
 
 // Select the database to use.
-use('learning_data');
+//use('learning_data');
 
 // Let's use find() the get all the documents in a collection
 //db.clients.find()
@@ -40,12 +40,16 @@ use('learning_data');
 // Now lets get only the document of the male clients
 //db.clients.find({ gender: 'M' })
 
+//db.listingsAndReviews.find({"property_type":"House"}, { name: 1 })
+
 // Lets add project to get specific props of the docs
 //let projection = { name: 1, age: 1, gender: 1, address: 1 }
 //db.clients.find({ gender: 'M' }, projection)
 
 // Lets get all the clients with the project included
 //db.clients.find({}, projection)
+//db.listingsAndReviews.find({}, { name: 1 })
 
 // Lets get all the clients with all the data except the gender prop
-db.clients.find({}, { gender: 0 })
+//db.clients.find({}, { gender: 0 })
+db.listingsAndReviews.find({}, { name: 0 })

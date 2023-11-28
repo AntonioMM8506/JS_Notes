@@ -3,14 +3,14 @@ use('learning_data')
 
 /* 
   ------------------------------------------------------------------------------------------------------------------
-    $and:
+    $exists:
     When the <boolean_value> is true, the $exists operator matches the documents that contain the field with 
     any value including null.
 
     If the <boolean_value> is false, the $exists operator matches the documents that don’t contain the field
   ------------------------------------------------------------------------------------------------------------------
 */
-//db.clients.find({ name: { $exists: true } }).count()
+db.clients.find({ name: { $exists: true } }).count()
 
 // Using the MongoDB $exists operator to query documents that don’t have a specified field
 db.clients.find({ birthday: { $exists: false } }).count()
