@@ -19,8 +19,9 @@ export class UsersService {
     return createdUser.save()
   }
 
+
   async findByEmail(email: string): Promise<UserDocument> {
-    const user = await this.userModel.findOne({ email: email }).exec()
+    const user = await this.userModel.findOne({ email: email }).exec();
 
     return user
   }

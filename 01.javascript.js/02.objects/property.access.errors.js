@@ -9,6 +9,7 @@ const book = {
   }
 }
 
+
 // book.subTitle does not exist
 //console.log(`The value of book.subTitle is: ${book.subTitle}`)
 

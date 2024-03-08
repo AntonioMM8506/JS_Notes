@@ -23,17 +23,65 @@ abstract class ParentClass {
   counter: I<number>
   interval: I<number>
   waitingTime: I<number>
-}
+
+  constructor(counter: I<number>, interval: I<number>, waitingTime: I<number>){
+    this.counter = counter;
+    this.interval = interval;
+    this.waitingTime = waitingTime;
+  }
+
+  
+}//End of ParentClass
 
 class CompetitiveStuff extends ParentClass {
-  constructor() {
-    super()
+  constructor(counter: I<number>, interval: I<number>, waitingTime: I<number>) {
+    super(counter, interval, waitingTime);
   }
 
-  static multy(): Promise<number[]> {
-    let myInterval = setInterval(() => {},)
-    clearInterval(myInterval)
-  }
+  static multy(counter: I<number>, interval:I<number>): Promise<number[]> {
+    let count = 1;
+    let mult = 1;
+    let res: number[] = [];
+    return new Promise((resolve, reject) => {
+      let myInterval = setInterval(() => {
+        mult = counter * count;
+        res.push(mult);
+        console.log(mult);
+        count++;
+        if(count === 10){
+          clearInterval(myInterval)
+        }
 
-  static wating() {}
-}
+      }, interval);
+      resolve(res);
+      
+    })
+
+  }//End of multy
+
+
+  static waiting(waitingTime: I<number>): Promise<string> {
+    return new Promise(() => {
+      setTimeout(() => {
+        console.log("Now we are done waiting");
+      }, waitingTime);
+    })
+  }//End of waiting
+
+
+
+  async promiseMethod(): Promise<string>{
+    try{
+      const result = await Promise.race([CompetitiveStuff.waiting(this.waitingTime), CompetitiveStuff.multy(this.counter, this.interval)])
+      return `First operation finished: ${result}`;
+    } catch(error){
+      return `Error`;
+    }
+  }//End of promiseMethod
+
+
+}//End of CompetitiveStuff
+
+
+let competitveInstance = new CompetitiveStuff(7, 50, 2000);
+let myResponse = competitveInstance.promiseMethod().then(res => console.log(res))
